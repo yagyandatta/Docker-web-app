@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box
+}
+
+
+/* Set height of body and the document to 100% */
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial;
+}
+
+
+/* Style tab links */
+
+.tablink {
+	background-color: #555;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 25%;
+}
+
+.tablink:hover {
+	background-color: #777;
+}
+
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent {
+	color: white;
+	display: none;
+	padding: 100px 20px;
+	height: 100%;
+}
+
+#Dashboard {
+	background-color: red;
+}
+
+#Images {
+	background-color: #00203FFF;
+}
+
+#Containers {
+	background-color: blue;
+}
+
+#Dockerfile {
+	background-color: orange;
+}
+
+
+/* button css */
+
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  border-radius: 10px; 
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  margin-top: 10px;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+.boxed {
+	border: 1px solid green ;
+  }
+
+
+  /* images block... */
+  * {
+	box-sizing: border-box;
+  }
+  
+  .box {
+	float: left;
+	width: 33.33%;
+	padding: 50px;
+  }
+  
+  .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
