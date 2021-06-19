@@ -16,26 +16,35 @@ function openPage(pageName, elmnt, color) {
 document.getElementById("defaultOpen").click();
 
 
+// drop-down
+function favTutorial() {
+  var mylist = document.getElementById("myList");
+  document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;
+  }
 
-// images
-// function l_img() {
 
-//   var xhr = new XMLHttpRequest();
-//   xhr.open("GET", "http://192.168.1.7/cgi-bin/docker-web.py?x=ls", true);
-//   xhr.send();
-
-//   xhr.onload = function() {
-//       var output = xhr.responseText;
-//       document.getElementById("op").innerHTML = "gggoutput";
-//   }
-// }
-
-function l_img() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://192.168.1.7/cgi-bin/docker-web.py?x=ls", false);
-  xhr.send();
-  var opp = xhr.responseText;
-  // document.getElementById("op").innerHTML = opp;
-  alert(opp);
-  
+  function addCode1() {
+    document.getElementById("mid").innerHTML =
+    '<form onsubmit="myFunction()">'+
+    '<b> Select your Image using dropdown list </b>'+
+    '<select id = "myList" onchange = "favTutorial()" >'+
+    '<option> ---Choose image--- </option>'+
+    '<option> centos</option>'+
+    '<option> ubuntu </option>'+
+    '<option> nginx </option>'+
+    '<option> jenkins </option>'+
+    '<option> vimal13/apache-webserver-php </option>'+
+    '</select>'+
+    '<p> Your selected Image is:'+ 
+    '<input type = "text" id = "favourite" size = "20" </p>'+
+    '<input type="submit" value="pull"></input>'
+    '</form>';
 }
+
+function myFunction(){
+  var mylist = document.getElementById("myList");
+  var img_name = mylist.options[mylist.selectedIndex].text;
+  image_os(img_name);
+}
+
+

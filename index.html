@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/mycss.css">
-   </head>
-   <body>
-      <button class="tablink" onclick="openPage('Dashboard', this, 'red')">Dashboard</button>
-      <button class="tablink" onclick="openPage('Images', this, '#00203FFF')" id="defaultOpen">Images</button>
-      <button class="tablink" onclick="openPage('Containers', this, 'blue')">Containers</button>
-      <button class="tablink" onclick="openPage('Dockerfile', this, 'orange')">Dockerfile</button>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/mycss.css">
+   <link rel="stylesheet" href="css/drop-down.css">
+</head>
+
+<body>
+   <button class="tablink" onclick="openPage('Dashboard', this, 'red')">Dashboard</button>
+   <button class="tablink" onclick="openPage('Images', this, '#00203FFF')" id="defaultOpen">Images</button>
+   <button class="tablink" onclick="openPage('Containers', this, 'blue')">Containers</button>
+   <button class="tablink" onclick="openPage('Dockerfile', this, 'orange')">Dockerfile</button>
 
 
-<!------------Dashboard---------- -->
+   <!------------Dashboard---------- -->
 
-      <div id="Dashboard" class="tabcontent">
-         <h3>Dashboard</h3>
-         <p>All process...</p>
+   <div id="Dashboard" class="tabcontent">
+      <h3>Dashboard</h3>
+      <p>All process...</p>
+   </div>
+
+   <!------------Images---------- -->
+
+   <div id="Images" class="tabcontent">
+
+      <div class="clearfix">
+         <div class="box1" style="background-color:#bbb">
+            <h3>Images</h3>
+            <div class="btn-group">
+               <button onclick="list_img();">List Images</button>
+
+               <button onclick="addCode1();"">Download Image</button>
+
+               <button onclick="addCode();">Remove Image</button>
+            </div>
+         </div>
+         <div class="box2" style="background-color:red">
+            <p id="mid"></p>
+         </div>
+         <div class="box3" style="background-color:#ddd">
+            <p id="op">Output...</p>
+         </div>
       </div>
+   </div>
+   <!------------Containers---------- -->
 
-<!------------Images---------- -->
+   <div id="Containers" class="tabcontent">
+      <h3>Containers</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+   </div>
 
-      <div id="Images" class="tabcontent">
+   <!------------Containers---------- -->
 
-          <div class="clearfix">
-             <div class="box" style="background-color:#bbb">
-               <h3>Images</h3>
-               <div class="btn-group">
-                   <button onclick="l_img();">List Images</button>
-                   <button id="d-his">Image History</button>
-                   <button id="d-pull">Pull Image</button>
-               </div>
-             </div>
-             <div class="box" style="background-color:#ccc">
-             <p>Some text inside the box.</p>
-             </div>
-             <div class="box" style="background-color:#ddd">
-             <p id="op">Output...</p>
-              </div>
-             </div>
-            </div> 
-<!------------Containers---------- -->
+   <div id="Dockerfile" class="tabcontent">
+      <h3>Dockerfile</h3>
+      <p>Who we are and what we do.</p>
+   </div>
 
-      <div id="Containers" class="tabcontent">
-         <h3>Containers</h3>
-         <p>Get in touch, or swing by for a cup of coffee.</p>
-      </div>
+   <script src="js/myScript.js"></script>
+   <script src="js/images.js"></script>
+</body>
 
-<!------------Containers---------- -->
-
-      <div id="Dockerfile" class="tabcontent">
-         <h3>Dockerfile</h3>
-         <p>Who we are and what we do.</p>
-      </div>
-
-      <script src="js/myScript.js"></script>
-   </body>
 </html>

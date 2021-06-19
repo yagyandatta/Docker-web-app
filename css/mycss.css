@@ -61,44 +61,67 @@ html {
 /* button css */
 
 .btn-group button {
-  background-color: #04AA6D; /* Green background */
-  border: 1px solid green; /* Green border */
-  border-radius: 10px; 
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  width: 50%; /* Set a width if needed */
-  display: block; /* Make the buttons appear below each other */
-  margin-top: 10px;
+	background-color: #04AA6D;
+	/* Green background */
+	border: 1px solid green;
+	/* Green border */
+	border-radius: 10px;
+	color: white;
+	/* White text */
+	padding: 10px 24px;
+	/* Some padding */
+	cursor: pointer;
+	/* Pointer/hand icon */
+	width: 100%;
+	/* Set a width if needed */
+	display: block;
+	/* Make the buttons appear below each other */
+	margin-top: 10px;
 }
 
 .btn-group button:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
+	border-bottom: none;
+	/* Prevent double borders */
 }
 
 /* Add a background color on hover */
 .btn-group button:hover {
-  background-color: #3e8e41;
+	background-color: #3e8e41;
 }
 
 .boxed {
-	border: 1px solid green ;
-  }
+	border: 1px solid green;
+}
 
 
-  /* images block... */
-  * {
+/* images block... */
+* {
 	box-sizing: border-box;
-  }
-  
-  .box {
+}
+
+.box1 {
 	float: left;
-	width: 33.33%;
+	/* width: 33.33%; */
+	width: 20%;
 	padding: 50px;
-  }
-  
-  .clearfix::after {
+}
+
+.box2 {
+	float: left;
+	/* width: 33.33%; */
+	width: 30%;
+	padding: 50px;
+}
+
+.box3 {
+	float: left;
+	/* width: 33.33%; */
+	width: 50%;
+	padding: 50px;
+}
+
+.clearfix::after {
 	content: "";
 	clear: both;
 	display: table;
-  }
+}
