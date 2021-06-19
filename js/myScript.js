@@ -41,10 +41,5 @@ function favTutorial() {
     '</form>';
 }
 
-function myFunction(){
-  var mylist = document.getElementById("myList");
-  var img_name = mylist.options[mylist.selectedIndex].text;
-  image_os(img_name);
-}
 
 
