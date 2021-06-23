@@ -2,7 +2,7 @@
 function list_img() {
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.1.7/cgi-bin/docker-web.py?x=docker images", true);
+    xhr.open("GET", "http://192.168.1.7/cgi-bin/doc.py?x=docker images", true);ker-web
     xhr.send();
 
     xhr.onload = function () {
@@ -11,14 +11,13 @@ function list_img() {
     }
 }
 
-
-
-// collecting-image names
 function myFunction(){
     var mylist = document.getElementById("myList");
     var img_name = mylist.options[mylist.selectedIndex].text;
     image_os(img_name);
   }
+
+
   
 
 //pulling-images using docker-hub

@@ -17,3 +17,6 @@ function w_images() {
 document.addEventListener("DOMContentLoaded", function() {
     w_images();
   });
+
+
+  // collecting-image names
