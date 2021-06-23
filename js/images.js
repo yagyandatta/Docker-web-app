@@ -2,7 +2,7 @@
 function list_img() {
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.1.7/cgi-bin/doc.py?x=docker images", true);ker-web
+    xhr.open("GET", "http://192.168.1.7/cgi-bin/doc.py?x=docker images", true);
     xhr.send();
 
     xhr.onload = function () {
