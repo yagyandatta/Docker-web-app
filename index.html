@@ -18,7 +18,14 @@
 
    <div id="Dashboard" class="tabcontent">
       <h3>Dashboard</h3>
-      <p id="d_img">All process...</p>
+      <div>
+         <h2><b>Docker Images</b></h2>
+         <pre>
+            <p id="d_img"></p>
+         </pre>
+
+      </div>
+
    </div>
 
    <!------------Images---------- -->
@@ -31,9 +38,9 @@
             <div class="btn-group">
                <button onclick="list_img();">List Images</button>
 
-               <button onclick="addCode1();"">Download Image</button>
+               <button onclick="pull_img();">Download Image</button>
 
-               <button onclick="addCode();">Remove Image</button>
+               <button onclick="rm_img();">Remove Image</button>
             </div>
          </div>
          <div class="box2" style="background-color:red">

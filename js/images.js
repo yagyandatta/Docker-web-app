@@ -34,3 +34,28 @@ function image_os(x) {
 }
 
 
+
+
+// remove-images
+
+function rm_img() {
+    document.getElementById("mid").innerHTML =
+    '<form onsubmit="rm_image()">'+
+    '<b> Enter Your Image Name: </b>'+
+    '<input type = "text" id = "in_data" size = "30" </p>'+
+    '<input type="submit" value="Delete"></input>'
+    '</form>';
+}
+
+function rm_image(){
+    var mylist1 = document.getElementById("in_data").value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker rmi -f "+mylist1, true);
+    xhr.send();
+
+    xhr.onload = function () {
+        var output = xhr.responseText;
+        document.getElementById("op").innerHTML = output;
+    }
+  }

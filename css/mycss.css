@@ -125,3 +125,7 @@ html {
 	clear: both;
 	display: table;
 }
+
+.op {
+	color: black;
+}

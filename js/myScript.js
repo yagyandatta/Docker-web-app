@@ -23,7 +23,7 @@ function favTutorial() {
   }
 
 
-  function addCode1() {
+  function pull_img() {
     document.getElementById("mid").innerHTML =
     '<form onsubmit="myFunction()">'+
     '<b> Select your Image using dropdown list </b>'+
