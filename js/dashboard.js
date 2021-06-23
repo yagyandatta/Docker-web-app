@@ -2,7 +2,7 @@ function w_images() {
     var watch = document.getElementById("myList");
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.1.7/cgi-bin/docker-web.py?x=watch docker images", true);
+    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=watch docker images", true);
     xhr.send();
 
     xhr.onload = function () {
