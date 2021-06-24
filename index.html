@@ -36,7 +36,7 @@
          <div class="box1" style="background-color:#bbb">
             <h3>Images</h3>
             <div class="btn-group">
-               <button onclick="docker();">List Images</button>
+               <button onclick="list_img();">List Images</button>
 
                <button onclick="pull_img();">Download Image</button>
 
@@ -46,18 +46,40 @@
          <div class="box2" style="background-color:red">
             <p id="mid"></p>
          </div>
-         <div class="box3" style="background-color:#ddd">
+         <div class="box3" style="background-color:black">
             <pre>
             <p id="op">Output...</p>
          </pre>
          </div>
       </div>
    </div>
+   
    <!------------Containers---------- -->
 
    <div id="Containers" class="tabcontent">
-      <h3>Containers</h3>
-      <p>Get in touch, or swing by for a cup of coffee.</p>
+
+      <div class="clearfix">
+         <div class="box1" style="background-color:#bbb">
+            <h3>Containers</h3>
+            <div class="btn-group">
+               <button onclick="list_con();">List Running Containers</button>
+
+               <button onclick="list_con_all();">List all Containers</button>
+
+               <button onclick="con_name();">Launch Container</button>
+
+               <button onclick="rm_con();">Remove Container</button>
+            </div>
+         </div>
+         <div class="box2" style="background-color:red">
+            <p id="mid_con"></p>
+         </div>
+         <div class="box3" style="background-color:black">
+            <pre>
+            <p id="op_con">Output...</p>
+         </pre>
+         </div>
+      </div>
    </div>
 
    <!------------Containers---------- -->
