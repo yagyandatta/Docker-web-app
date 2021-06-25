@@ -1,5 +1,4 @@
 function docker(x) {
-
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker  "+x, true);
     xhr.send();
@@ -8,7 +7,7 @@ function docker(x) {
         var output = xhr.responseText;
         document.getElementById("op_con").innerHTML = output;
     }
-    
+
 }
 
 
@@ -16,14 +15,7 @@ function docker(x) {
 
 
 
-// function con_image() {
-//     document.getElementById("mid_con").innerHTML =
-//     '<form onsubmit="run_con()">'+
-//     '<b> Enter Your Image Name: </b>'+
-//     '<input type = "text" id = "c_image" size = "30" </p>'+
-//     '<input type="submit" value="Launch"></input>'
-//     '</form>';
-// }
+
 
 function con_name() {
     document.getElementById("mid_con").innerHTML =
@@ -55,8 +47,9 @@ function list_con_all() {
 function run_con() {
     var i_con = document.getElementById("c_image").value;
     var nm_con = document.getElementById("c_name").value;
-    var code = "run -it --name "+ nm_con + " " + i_con;
-    docker(code);
+    var code = "run  -it  --name  "+ nm_con + " " + i_con;
+    var code1 = code;
+    docker(code1);
 }
 
 
