@@ -47,11 +47,20 @@ function list_con_all() {
 function run_con() {
     var i_con = document.getElementById("c_image").value;
     var nm_con = document.getElementById("c_name").value;
-    var code = "run  -it  --name  "+ nm_con + " " + i_con;
-    var code1 = code;
-    docker(code1);
+    docker_rm(nm_con,i_con);
 }
 
+function docker_rm(x,y) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker run  -it  --name "+x + " "+ y, true);
+    xhr.send();
+
+    xhr.onload = function () {
+        var output = xhr.responseText;
+        document.getElementById("op_con").innerHTML = output;
+    }
+
+}
 
 
 // remove container 
