@@ -16,21 +16,23 @@ function docker(x) {
 
 
 
-function con_image() {
-    document.getElementById("mid_con").innerHTML =
-    '<form onsubmit="run_con()">'+
-    '<b> Enter Your Image Name: </b>'+
-    '<input type = "text" id = "c_image" size = "30" </p>'+
-    '<input type="submit" value="Launch"></input>'
-    '</form>';
-}
+// function con_image() {
+//     document.getElementById("mid_con").innerHTML =
+//     '<form onsubmit="run_con()">'+
+//     '<b> Enter Your Image Name: </b>'+
+//     '<input type = "text" id = "c_image" size = "30" </p>'+
+//     '<input type="submit" value="Launch"></input>'
+//     '</form>';
+// }
 
 function con_name() {
     document.getElementById("mid_con").innerHTML =
-    '<form onsubmit="con_image()">'+
+    '<form onsubmit="run_con()">'+
     '<b> Type new container Name: </b>'+
     '<input type = "text" id = "c_name" size = "30" </p>'+
-    '<input type="submit" value="Next"></input>'
+    '<b> Enter Your Image Name: </b>'+
+    '<input type = "text" id = "c_image" size = "30" </p> <br>'+
+    '<input type="submit" value="Launch"></input>'+
     '</form>';
 }
 
@@ -52,15 +54,28 @@ function list_con_all() {
 // launch-containers
 function run_con() {
     var i_con = document.getElementById("c_image").value;
-    var n_con = document.getElementById("c_name").value;
-    // var code = "run -it --name "+ n_con + i_con ;
-    alert("i_con" + "n_con");
-    //docker(code);
+    var nm_con = document.getElementById("c_name").value;
+    var code = "run -it --name "+ nm_con + " " + i_con;
+    docker(code);
 }
 
 
+
+// remove container 
+function con_name() {
+    document.getElementById("mid_con").innerHTML =
+    '<form onsubmit="rm_con()">'+
+    '<b> Enter container Name: </b>'+
+    '<input type = "text" id = "c_name" size = "30" </p><br>'+
+    '<input type="submit" value="Delete"></input>'+
+    '</form>';
+
+}
 function rm_con() {
-    var code = "ps";
+    var rm_name = document.getElementById("c_name").value;
+
+    var code = "rm -f " + rm_name;
+
     docker(code);
 }
 
