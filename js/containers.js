@@ -62,7 +62,7 @@ function run_con() {
 
 
 // remove container 
-function con_name() {
+function rm_con_name() {
     document.getElementById("mid_con").innerHTML =
     '<form onsubmit="rm_con()">'+
     '<b> Enter container Name: </b>'+
