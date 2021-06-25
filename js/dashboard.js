@@ -1,22 +1,37 @@
-function w_images() {
-    var watch = document.getElementById("myList");
-
+function img_dash() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker images", true);
+    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker images"+ y , true);
     xhr.send();
 
     xhr.onload = function () {
         var output = xhr.responseText;
-        document.getElementById("d_img").innerHTML = output;
+        document.getElementById("o_img").innerHTML = output;
     }
-    document.getElementById("d_img").innerHTML = output;
 
+    setTimeout(img_dash, 5000);
+    
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    w_images();
-  });
+img_dash();
 
 
-  // collecting-image names
+function con_dash() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker images"+ y , true);
+    xhr.send();
+
+    xhr.onload = function () {
+        var output = xhr.responseText;
+        document.getElementById("o_img").innerHTML = output;
+    }
+
+    setTimeout(con_dash, 5000);
+    
+}
+
+con_dash();
+
+function both() {
+    img_dash();
+    
+}

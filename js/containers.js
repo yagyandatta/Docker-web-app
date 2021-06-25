@@ -8,11 +8,8 @@ function docker(x) {
         document.getElementById("op_con").innerHTML = output;
     }
 
+
 }
-
-
-
-
 
 
 
