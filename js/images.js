@@ -30,6 +30,7 @@ function image_os(x) {
         var output = xhr.responseText;
         document.getElementById("op").innerHTML = output;
     }
+    
 }
 
 

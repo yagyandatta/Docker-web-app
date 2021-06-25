@@ -1,6 +1,6 @@
 function img_dash() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker images"+ y , true);
+    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker images", true);
     xhr.send();
 
     xhr.onload = function () {
@@ -17,7 +17,7 @@ img_dash();
 
 function con_dash() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker images"+ y , true);
+    xhr.open("GET", "http://192.168.1.16/cgi-bin/docker_api.py?x=docker ps -a" , true);
     xhr.send();
 
     xhr.onload = function () {
@@ -32,6 +32,5 @@ function con_dash() {
 con_dash();
 
 function both() {
-    img_dash();
-    
+    img_dash(); 
 }
